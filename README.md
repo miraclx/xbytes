@@ -250,7 +250,7 @@ Byte parser with predefined configuration. Result of [`createByteParser`](#fn:cr
 * `prefixIndex`: &lt;[number][]&gt; The index of the size string.
   * `'3'` in `'GB'`
 
-#### <a id='parsedbytes'></a> ParsedBytes `extends [ParsedUnit](#parsedunit)`: [`Object`][object]
+#### <a id='parsedbytes'></a> ParsedBytes <sub>`extends` [ParsedUnit](#parsedunit)</sub>: [`Object`][object]
 
 * `unit`: &lt;[UnitString](#unitstring)&gt; The unit of sizing.
   * `'GiB'` in `'54 GiB'`
@@ -268,8 +268,6 @@ Byte parser with predefined configuration. Result of [`createByteParser`](#fn:cr
 * `iecBits`: &lt;[ByteString](#bytestring)&gt; A relative bit parsing of the input [HybridByte](#hybridraw) under the IEC Specification
 * `iecBytes`: &lt;[ByteString](#bytestring)&gt; A relative byte parsing of the input [HybridByte](#hybridraw) under the IEC Specification
   
-#### <a id='hybridsizerelations'></a> HybridSizeRelations: [`Object`][object]
-
 ## More Examples
 
 Check out some examples in the `examples` folder
