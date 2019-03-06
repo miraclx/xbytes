@@ -1,0 +1,69 @@
+{
+  "name": "xbytes",
+  "version": "1.0.0",
+  "description": "Parse bytes to human readable sizes (4747) → ('4.75 KB') and vice versa.",
+  "main": "dist/index.js",
+  "types": "typings/index.d.ts",
+  "scripts": {
+    "test": "jest",
+    "build": "babel lib -d dist"
+  },
+  "keywords": [
+    "convert",
+    "size",
+    "bytes",
+    "bits",
+    "parser",
+    "iec",
+    "binary",
+    "decimal",
+    "human",
+    "humanized",
+    "data",
+    "filesize",
+    "file",
+    "readable",
+    "utility",
+    "convert",
+    "converter",
+    "pretty"
+  ],
+  "author": "Miraculous Owonubi <omiraculous@gmail.com>",
+  "maintainers": [
+    "Miraculous Owonubi <omiraculous@gmail.com>"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Miraclx/xbytes.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Miraclx/xbytes/issues"
+  },
+  "license": "Apache-2.0",
+  "babel": {
+    "presets": [
+      "airbnb",
+      "@babel/preset-env"
+    ]
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.2.3",
+    "@babel/core": "^7.3.3",
+    "@babel/preset-env": "^7.3.1",
+    "babel-eslint": "^10.0.1",
+    "babel-preset-airbnb": "^3.2.0",
+    "eslint": "^5.3.0",
+    "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-config-prettier": "^4.0.0",
+    "eslint-plugin-import": "^2.16.0",
+    "eslint-plugin-prettier": "^3.0.1",
+    "jest": "^24.1.0",
+    "prettier": "^1.16.4"
+  },
+  "homepage": "https://github.com/Miraclx/xbytes#readme",
+  "directories": {
+    "lib": "lib",
+    "test": "test"
+  },
+  "dependencies": {}
+}
