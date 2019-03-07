@@ -200,7 +200,7 @@ An regular expression extension of [`genericMatcher`](#genericmatcher) with the 
 * `bits`: &lt;[boolean][]&gt; Whether or not to convert inputed bytes to bits and parse in terms of bits [1 byte = 8 bits]. **Default**: `false`.
 * `fixed`: &lt;[number][]&gt; Number of digits to include after decimal point. **Default**: `2`.
 * `short`: &lt;[boolean][]&gt; Whether or not to shorten unit String [short: 'MB', long: 'MegaBytes']. **Default**: `true`.
-* `space`: &lt;[boolean][]&gt; Whether ot not to include a white space inbetween value and unit. **Default**: `true`.
+* `space`: &lt;[boolean][]&gt; Whether or not to include a white space inbetween value and unit. **Default**: `true`.
 * `prefixIndex`: &lt;[number][]&gt; The index of size relativity.
 
 #### <a id='parseoptions'></a> ParseOptions: [`Object`][object]
