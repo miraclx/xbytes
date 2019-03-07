@@ -8,6 +8,9 @@
     "test": "jest",
     "build": "babel lib -d dist"
   },
+  "engines": {
+    "node": ">=1"
+  },
   "files": [
     "dist",
     "typings",

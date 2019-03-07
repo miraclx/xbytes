@@ -3,6 +3,8 @@
 > NodeJS Byte Parser
 > Parse bytes to human readable sizes (4747) → ('4.75 KB') and vice versa.
 
+[![NPM Version][npm-image]][npm-url]
+[![NPM Downloads][downloads-image]][downloads-url]
 [![NPM][npm-image-url]][npm-url]
 
 ## Installing
@@ -375,9 +377,11 @@ npm test
 [jest]:  https://github.com/facebook/jest 'Delightful JavaScript Testing'
 [license]:  LICENSE 'Apache 2.0 License'
 
-[npm-url]: https://nodei.co/npm/xbytes/
-[author-url]: https://github.com/miraclx
+[npm-url]: https://npmjs.org/package/xbytes
+[npm-image]: https://badgen.net/npm/node/xbytes
 [npm-image-url]: https://nodei.co/npm/xbytes.png?stars&downloads
+[downloads-url]: https://npmjs.org/package/xbytes
+[downloads-image]: https://badgen.net/npm/dm/xbytes
 
 [number]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type
 [object]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object
