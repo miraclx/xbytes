@@ -26,7 +26,7 @@ import xbytes from 'xbytes';
 
 ``` html
 <!-- Or in the Browser -->
-<script src="xbytes/libs/index.js"></script>
+<script src="xbytes/dist/index.js"></script>
 ```
 
 ## Examples
