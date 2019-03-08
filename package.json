@@ -6,7 +6,10 @@
   "types": "typings/index.d.ts",
   "scripts": {
     "test": "jest",
-    "build": "babel lib -d dist"
+    "build": "babel lib -d dist",
+    "preversion": "npm test",
+    "version": "npm run build",
+    "postversion": "git push && git push --tags"
   },
   "engines": {
     "node": ">=1"
