@@ -42,10 +42,10 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Miraclx/xbytes.git"
+    "url": "git+https://github.com/miraclx/xbytes.git"
   },
   "bugs": {
-    "url": "https://github.com/Miraclx/xbytes/issues"
+    "url": "https://github.com/miraclx/xbytes/issues"
   },
   "license": "Apache-2.0",
   "babel": {
@@ -68,7 +68,7 @@
     "jest": "^24.1.0",
     "prettier": "^1.16.4"
   },
-  "homepage": "https://github.com/Miraclx/xbytes#readme",
+  "homepage": "https://github.com/miraclx/xbytes#readme",
   "directories": {
     "lib": "lib",
     "test": "test"

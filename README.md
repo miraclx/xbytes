@@ -347,7 +347,7 @@ data.replace(xbytes.globalByteFilter, xbytes.createSizeParser({ iec: false }))
 Feel free to clone, use in adherance to the [license](#license) and perhaps send pull requests
 
 ``` bash
-git clone https://github.com/Miraclx/xbytes.git
+git clone https://github.com/miraclx/xbytes.git
 cd xbytes
 npm install
 # hack on code
@@ -376,6 +376,7 @@ npm test
 [npm]:  https://github.com/npm/npm 'The Node Package Manager'
 [jest]:  https://github.com/facebook/jest 'Delightful JavaScript Testing'
 [license]:  LICENSE 'Apache 2.0 License'
+[author-url]: https://github.com/miraclx
 
 [npm-url]: https://npmjs.org/package/xbytes
 [npm-image]: https://badgen.net/npm/node/xbytes
