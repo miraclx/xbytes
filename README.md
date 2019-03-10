@@ -5,6 +5,7 @@
 
 [![NPM Version][npm-image]][npm-url]
 [![NPM Downloads][downloads-image]][downloads-url]
+
 [![NPM][npm-image-url]][npm-url]
 
 ## Installing
@@ -19,7 +20,7 @@ npm install xbytes
 
 ``` javascript
 // Node CommonJS
-var xbytes = require('xbytes');
+const xbytes = require('xbytes');
 // Or Node ES6
 import xbytes from 'xbytes';
 ```
