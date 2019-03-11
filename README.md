@@ -341,6 +341,26 @@ data.replace(xbytes.globalByteFilter, xbytes.createSizeParser({ iec: false }))
   //> 'My 17179869184 flash drive has a 4294967296 Zip Archive and a 5242880 JavaScript file'
 ```
 
+### Decimal and Binary Unit Relativity
+
+``` javascript
+import { parseSize, relative } from 'xbytes';
+
+parseSize(relative('35 TiB', {fixed: 20}).bits); // '307.86 Tb'
+parseSize(relative('35 TiB', {fixed: 20}).bytes); // '38.48 TB'
+parseSize(relative('35 TiB', {fixed: 20}).iecBits); // '280.00 Tib'
+parseSize(relative('35 TiB', {fixed: 20}).iecBytes); // '35.00 TiB'
+
+parseSize(relative('35 TiB', {fixed: 20}).bits);
+  //> 38482906972160
+parseSize(relative('35 TiB', {fixed: 20}).bytes);
+  //> 38482906972160
+parseSize(relative('35 TiB', {fixed: 20}).iecBits);
+  //> 38482906972160
+parseSize(relative('35 TiB', {fixed: 20}).iecBytes);
+  //> 38482906972160
+```
+
 ## Development
 
 ### Building
