@@ -346,10 +346,10 @@ data.replace(xbytes.globalByteFilter, xbytes.createSizeParser({ iec: false }))
 ``` javascript
 import { parseSize, relative } from 'xbytes';
 
-parseSize(relative('35 TiB', {fixed: 20}).bits); // '307.86 Tb'
-parseSize(relative('35 TiB', {fixed: 20}).bytes); // '38.48 TB'
-parseSize(relative('35 TiB', {fixed: 20}).iecBits); // '280.00 Tib'
-parseSize(relative('35 TiB', {fixed: 20}).iecBytes); // '35.00 TiB'
+relative('35 TiB').bits // '307.86 Tb'
+relative('35 TiB').bytes // '38.48 TB'
+relative('35 TiB').iecBits // '280.00 Tib'
+relative('35 TiB').iecBytes // '35.00 TiB'
 
 parseSize(relative('35 TiB', {fixed: 20}).bits);
   //> 38482906972160
