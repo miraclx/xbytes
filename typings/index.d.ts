@@ -116,7 +116,7 @@ namespace xbytes {
      *   >>> relative.size(28474474857737, 'TiB')
      *   |>| "25.90 TiB"
      */
-    size(size: HybridByte, unit: AllUnitStacks, options: MainOpts): ByteString;
+    size(size: HybridByte, unit: AllUnitStacks, options?: MainOpts): ByteString;
   }
 
   /**
@@ -166,7 +166,7 @@ namespace xbytes {
    * @param options.iec Whether or not to enforce compliance to IEC Standards
    * @param options.bits Whether or not to parse a lower case 'b' as bits
    */
-  function parseBytes(size: HybridByte, options: ParseByteOpts): TotalParsedBytes
+  function parseBytes(size: HybridByte, options?: ParseByteOpts): TotalParsedBytes
   /**
    * Expose a string byte into its component parts
    * @param stringBytes A parsed byte in string format
@@ -187,7 +187,7 @@ namespace xbytes {
    * @param unit The unit for relativity
    * @param config Static configuration for `relative.size`
    */
-  function createRelativeSizer(unit: AllUnitStacks, config: MainOpts): StaticRelativeSizer;
+  function createRelativeSizer(unit: AllUnitStacks, config?: MainOpts): StaticRelativeSizer;
 }
 /**
  * Make bytes human readable
