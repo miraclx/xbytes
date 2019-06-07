@@ -8,10 +8,10 @@ namespace xbytes {
 
   type ByteValue = number;
   type ByteString = string;
-  type HybridByte =  ByteValue | ByteString;
+  type HybridByte = ByteValue | ByteString;
 
   interface InternalParsedUnit {
-    iec:  boolean;
+    iec: boolean;
     type: 'b' | 'B';
     bits: boolean;
     byte: boolean;
@@ -36,17 +36,17 @@ namespace xbytes {
   }
 
   interface MainOpts {
-    iec: boolean;
-    bits: boolean;
-    fixed: number;
-    short: boolean;
-    space: boolean;
-    prefixIndex: number;
+    iec?: boolean;
+    bits?: boolean;
+    fixed?: number;
+    short?: boolean;
+    space?: boolean;
+    prefixIndex?: number;
   }
 
   interface ParseByteOpts {
-    iec: boolean;
-    bits: boolean;
+    iec?: boolean;
+    bits?: boolean;
   }
 
   interface HybridByteRelations {
@@ -154,7 +154,7 @@ namespace xbytes {
    * @param options.iec Whether or not to enforce compliance to IEC Standards
    * @param options.bits Whether or not to parse a lower case 'b' as bits
   */
-  function parseSize(stringBytes: ByteString, options: ParseByteOpts): ByteValue;
+  function parseSize(stringBytes: ByteString, options?: ParseByteOpts): ByteValue;
   /**
    * Parse a unit to its components
    * @param unit The unit to parse into its components
