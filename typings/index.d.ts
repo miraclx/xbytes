@@ -1,4 +1,4 @@
-namespace xbytes {
+declare namespace xbytes {
   type KeyUnitStack = 'B'|'K'|'M'|'G'|'T'|'P'|'E'|'Z'|'Y';
   type ShortUnitStack = 'B'|'KB'|'MB'|'GB'|'TB'|'PB'|'EB'|'ZB'|'YB';
   type ShortBitUnitStack = 'b'|'Kb'|'Mb'|'Gb'|'Tb'|'Pb'|'Eb'|'Zb'|'Yb';
