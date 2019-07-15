@@ -394,7 +394,7 @@ npm test
 [Apache 2.0][license] © **Miraculous Owonubi** ([@miraclx][author-url]) &lt;omiraculous@gmail.com&gt;
 
 [IEC]: https://en.wikipedia.org/wiki/Units_of_information#Systematic_multiples 'International Electrotechnical Commission'
-[npm]:  https://github.com/npm/npm 'The Node Package Manager'
+[npm]:  https://github.com/npm/cli 'The Node Package Manager'
 [jest]:  https://github.com/facebook/jest 'Delightful JavaScript Testing'
 [license]:  LICENSE 'Apache 2.0 License'
 [author-url]: https://github.com/miraclx
