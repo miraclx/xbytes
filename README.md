@@ -13,7 +13,7 @@
 Via [NPM][npm]:
 
 ``` bash
-npm install xbytes
+$ npm install xbytes
 ```
 
 ## Usage
