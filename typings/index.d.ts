@@ -136,7 +136,7 @@ declare namespace xbytes {
    */
   const globalByteFilter: RegExp;
   /**
-   * Check of the provided string is a parsed byte in string format
+   * Check if the provided string is a parsed byte in string format
    * @param stringBytes A parsed byte in string format
    */
   function isBytes(stringBytes: ByteString): boolean;
