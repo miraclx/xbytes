@@ -47,9 +47,9 @@ xbytes(5242880, {iec: true}); // '5 MiB'
 xbytes.parseSize('10 GiB'); // 10485760
 ```
 
-### API
+## API
 
-#### <a id='fn:xbytes'></a> xbytes(byte[, options])
+### <a id='fn:xbytes'></a> xbytes(byte[, options])
 
 * `byte`: &lt;[number][]&gt;
 * `options`: &lt;[ByteOptions](#byteoptions)&gt;
@@ -57,7 +57,7 @@ xbytes.parseSize('10 GiB'); // 10485760
 
 Parse `byte` to human readable size. If `byte` is not an Integer or an Integer-like string, return `null` appropriately.
 
-#### <a id='fn:parsesize'></a> xbytes.parseSize(str[, config])
+### <a id='fn:parsesize'></a> xbytes.parseSize(str[, config])
 
 * `str`: &lt;[ByteString](#bytestring)&gt;
 * `config`: &lt;[ParseOptions](#parseoptions)&gt;
@@ -65,83 +65,90 @@ Parse `byte` to human readable size. If `byte` is not an Integer or an Integer-l
 
 Parse human readable size to bytes
 
-#### <a id='fn:isbytes'></a> xbytes.isBytes(str)
+### <a id='fn:isbytes'></a> xbytes.isBytes(str)
 
 * `str`: &lt;[string][]&gt;
 * Returns: &lt;[boolean][]&gt;
 
 Check if the provided string is a [ByteString](#bytestring)
 
-#### <a id='fn:relative'></a> xbytes.relative(size[, options])
+### <a id='fn:isparsable'></a> xbytes.isParsable(input)
+
+* `input`: &lt;[ByteString](#bytestring)&gt;
+* Returns: &lt;[boolean][]&gt;
+
+Check if the provided argument is parsable _i.e_ raw_bytes ([number]) or [ByteString](#bytestring).
+
+### <a id='fn:relative'></a> xbytes.relative(size[, options])
 
 * `size`: &lt;[HybridByte](#hybridbyte)&gt;
 * `options`: &lt;[ByteOptions](#byteoptions)&gt;
 * Returns: &lt;[HybridByteRelations](#hybridbyterelations)&gt;
 
-#### <a id='fn:relative:bits'></a> xbytes.relative.bits(size)
+### <a id='fn:relative:bits'></a> xbytes.relative.bits(size)
 
 * `size`: &lt;[HybridByte](#hybridbyte)&gt;
 * Returns: &lt;[ByteString](#Bytestring)&gt;
 
 Show the input size in relation to its `bit` format
 
-#### <a id='fn:relative:bytes'></a> xbytes.relative.bytes(size)
+### <a id='fn:relative:bytes'></a> xbytes.relative.bytes(size)
 
 * `size`: &lt;[HybridByte](#hybridbyte)&gt;
 * Returns: &lt;[ByteString](#Bytestring)&gt;
 
 Show the input size in relation to its `byte` format
 
-#### <a id='fn:relative:iecBits'></a> xbytes.relative.iecBits(size)
+### <a id='fn:relative:iecBits'></a> xbytes.relative.iecBits(size)
 
 * `size`: &lt;[HybridByte](#hybridbyte)&gt;
 * Returns: &lt;[ByteString](#Bytestring)&gt;
 
 Show the input size in relation to its `bit` format under `IEC Standards`
 
-#### <a id='fn:relative:iecBytes'></a> xbytes.relative.iecBytes(size)
+### <a id='fn:relative:iecBytes'></a> xbytes.relative.iecBytes(size)
 
 * `size`: &lt;[HybridByte](#hybridbyte)&gt;
 * Returns: &lt;[ByteString](#Bytestring)&gt;
 
 Show the input size in relation to its `bytes` format under `IEC Standards`
 
-#### <a id='fn:relative:size'></a> xbytes.relative.size(size[, unit[, options]])
+### <a id='fn:relative:size'></a> xbytes.relative.size(size[, unit[, options]])
 
 * `size`: &lt;[HybridByte](#hybridbyte)&gt;
 * `unit`: &lt;[UnitString](#unitstring)&gt;
 * `options`: &lt;[ByteOptions](#byteoptions)&gt;
 * Returns: &lt;[ByteString](#bytestring)&gt;
 
-#### <a id='fn:parsestring'></a> xbytes.parseString(str)
+### <a id='fn:parsestring'></a> xbytes.parseString(str)
 
 * `str`: &lt;[string][]&gt;
 * Returns: &lt;[ParsedBytes](#parsedbytes)&gt;
 
 Parse a human readable byte into its components
 
-#### <a id='fn:extractbytes'></a> xbytes.extractBytes(str)
+### <a id='fn:extractbytes'></a> xbytes.extractBytes(str)
 
 * `str`: &lt;[string][]&gt;
 * Returns: &lt;[ByteString](#bytestring)[]&gt;
 
 Extract all [ByteString](#bytestring)s within a string into an array, alternative to `str.match(xbytes.byteFilter)`
 
-#### <a id='fn:createbyteparser'></a> xbytes.createByteParser(config)
+### <a id='fn:createbyteparser'></a> xbytes.createByteParser(config)
 
 * `config`: &lt;[ByteOptions](#byteoptions)&gt;
 * Returns: &lt;[ByteParser](#byteparser)&gt;
 
 Construct a static [ByteParser](#byteparser) with predefined configurations
 
-#### <a id='fn:createsizeparser'></a> xbytes.createSizeParser(config)
+### <a id='fn:createsizeparser'></a> xbytes.createSizeParser(config)
 
 * `config`: &lt;[ParseOptions](#parseoptions)&gt;
 * Returns: &lt;[SizeParser](#sizeparser)&gt;
 
 Construct a static [SizeParser](#sizeparser) with predefined configurations
 
-#### <a id='fn:createrelativesizer'></a> xbytes.createRelativeSizer(unit[, config])
+### <a id='fn:createrelativesizer'></a> xbytes.createRelativeSizer(unit[, config])
 
 * `unit`: &lt;[UnitString](#unitstring)&gt;
 * `config`: &lt;[ByteOptions](#byteoptions)&gt;
@@ -149,23 +156,23 @@ Construct a static [SizeParser](#sizeparser) with predefined configurations
 
 Create a [RelativeSizer](#relativesizer) for converting a hybrid byte into any set unit under predefined configuration
 
-#### <a id='unitmatcher'></a> xbytes.unitMatcher: [`RegExp`][regexp]
+### <a id='unitmatcher'></a> xbytes.unitMatcher: [`RegExp`][regexp]
 
 The raw Regular expression used in scanning all string byte units.
 
-#### <a id='genericmatcher'></a> xbytes.genericMatcher: [`RegExp`][regexp]
+### <a id='genericmatcher'></a> xbytes.genericMatcher: [`RegExp`][regexp]
 
 The raw regular expression used in scanning all byte containing strings.
 
-#### <a id='bytefilter'></a> xbytes.byteFilter: [`RegExp`][regexp]
+### <a id='bytefilter'></a> xbytes.byteFilter: [`RegExp`][regexp]
 
 An regular expression extension of [`genericMatcher`](#genericmatcher) with the 'i' flag.
 
-#### <a id='globalbytefilter'></a> xbytes.globalByteFilter: [`RegExp`][regexp]
+### <a id='globalbytefilter'></a> xbytes.globalByteFilter: [`RegExp`][regexp]
 
 An regular expression extension of [`genericMatcher`](#genericmatcher) with the 'gi' flags.
 
-#### <a id='unitstring'></a> UnitString: [`String`][string]
+### <a id='unitstring'></a> UnitString: [`String`][string]
 
  Supported Unit Strings
 
@@ -182,7 +189,7 @@ An regular expression extension of [`genericMatcher`](#genericmatcher) with the 
  |   Z    | Zb (ZettaBits) |    Zib (ZebiBits)     | ZB (ZettaBytes) |    ZiB (ZebiBytes)     |
  |   Y    | Yb (YottaBits) |    Yib (YobiBits)     | YB (YottaBytes) |    YiB (YobiBytes)     |
 
-#### <a id='bytestring'></a> ByteString: [`String`][string]
+### <a id='bytestring'></a> ByteString: [`String`][string]
 
  The result of a parsed byte
 
@@ -190,14 +197,14 @@ An regular expression extension of [`genericMatcher`](#genericmatcher) with the 
 * '10 GiB'
 * '0.67 Tb'
 
-#### <a id='hybridbyte'></a> HybridByte: [`Number`][number]|[`ByteString`](#bytestring)
+### <a id='hybridbyte'></a> HybridByte: [`Number`][number]|[`ByteString`](#bytestring)
 
  Used to identify a variable thats either a [ByteString](#bytestring) or a [number][]
 
 * '47 MiB'
 * 74753
 
-#### <a id='byteoptions'></a> ByteOptions: [`Object`][object]
+### <a id='byteoptions'></a> ByteOptions: [`Object`][object]
 
 * `iec`: &lt;[boolean][]&gt; Whether or not to parse under the [IEC standard][IEC] i.e in terms of 1024. **Default**: `true`
 * `bits`: &lt;[boolean][]&gt; Whether or not to convert inputed bytes to bits and parse in terms of bits [1 byte = 8 bits]. **Default**: `false`.
@@ -206,33 +213,33 @@ An regular expression extension of [`genericMatcher`](#genericmatcher) with the 
 * `space`: &lt;[boolean][]&gt; Whether or not to include a white space inbetween value and unit. **Default**: `true`.
 * `prefixIndex`: &lt;[number][]&gt; The index of size relativity.
 
-#### <a id='parseoptions'></a> ParseOptions: [`Object`][object]
+### <a id='parseoptions'></a> ParseOptions: [`Object`][object]
 
 * `iec`: &lt;[boolean][]&gt; Whether or not to enforce compliance to [IEC standard][IEC]s. **Default**: `true`.
 * `bits`: &lt;[boolean][]&gt; Whether or not to parse a lower case 'b' in bit format. **Default**: `true`.
 
-#### <a id='byteparser'></a> ByteParser: [`Function`][function]
+### <a id='byteparser'></a> ByteParser: [`Function`][function]
 
 * `size`: &lt;[number][]&gt;
 * Returns: &lt;[ByteString](#bytestring)&gt;
 
 Byte parser with predefined configuration. Result of [`createByteParser`](#fn:createbyteparser).
 
-#### <a id='sizeparser'></a> SizeParser: [`Function`][function]
+### <a id='sizeparser'></a> SizeParser: [`Function`][function]
 
 * `str`: &lt;[ByteString](#bytestring)[]&gt;
 * Returns: &lt;[number][]&gt;
 
 [ByteString](#bytestring) parser with predefined configuration. Result of [`createSizeParser`](#fn:createsizeparser).
 
-#### <a id='relativesizer'></a> RelativeSizer: [`Function`][function]
+### <a id='relativesizer'></a> RelativeSizer: [`Function`][function]
 
 * `size`: &lt;[HybridByte](#hybridbyte)&gt;
 * Returns: &lt;[ByteString](#bytestring)&gt;
 
 [HybridByte](#hybridbyte) parser with predefined configuration. Result of [`createRelativeSizer`](#fn:createrelativesizer).
 
-#### <a id='parsedunit'></a> ParsedUnit: [`Object`][object]
+### <a id='parsedunit'></a> ParsedUnit: [`Object`][object]
 
 * `iec`: &lt;[boolean][]&gt; Whether or not the byte is represented under the [IEC standard][IEC] i.e in terms of 1024.
   * `true` in `'7 TiB'`
@@ -253,7 +260,7 @@ Byte parser with predefined configuration. Result of [`createByteParser`](#fn:cr
 * `prefixIndex`: &lt;[number][]&gt; The index of the size string.
   * `'3'` in `'GB'`
 
-#### <a id='parsedbytes'></a> ParsedBytes <sub>`extends` [ParsedUnit](#parsedunit)</sub>: [`Object`][object]
+### <a id='parsedbytes'></a> ParsedBytes <sub>`extends`</sub> [ParsedUnit](#parsedunit): [`Object`][object]
 
 * `unit`: &lt;[UnitString](#unitstring)&gt; The unit of sizing.
   * `'GiB'` in `'54 GiB'`
@@ -262,7 +269,52 @@ Byte parser with predefined configuration. Result of [`createByteParser`](#fn:cr
 * `value`: &lt;[number][]&gt; The value for the size.
   * `83` in `'83MB'`
 
-#### <a id='hybridbyterelations'></a> HybridByteRelations: [`Object`][object]
+### <a id='byteunitobject'></a> class ByteUnitObject <sub>`extends`</sub> [`ParsedBytes`](#parsedbytes)
+
+* `size`: &lt;[HybridByte](#hybridbyte)&gt; The value to be wrapped.
+
+Wrap a HybridByte in a chainable, transformative object
+
+```javascript
+new ByteUnitObject('10 MB').add('20 MB').size
+// << '30.00 MB'
+new ByteUnitObject('20 GB').divide('10 MB').size
+// << '2.00 KB'
+```
+
+#### ByteUnitObject().add(bytes)
+
+* `bytes`: &lt;[HybridByte](#hybridbyte)|[HybridByte](#hybridbyte)[]&gt; Byte(s) to subract from the root byte.
+* Returns: &lt;[ByteUnitObject](#byteunitobject)&gt;
+
+Add byte(s) to the internal bytes, resulting in a new [`ByteUnitObject`](#byteunitobject) object with the value
+
+#### ByteUnitObject().subtract(bytes)
+
+* `bytes`: &lt;[HybridByte](#hybridbyte)|[HybridByte](#hybridbyte)[]&gt; Subtract byte(s) from the internal bytes, resulting in a new ByteUnitObject object with the value.
+* Returns: &lt;[ByteUnitObject](#byteunitobject)&gt;
+
+Subtract byte(s) from the internal bytes, resulting in a new [`ByteUnitObject`](#byteunitobject) object with the value
+
+#### ByteUnitObject().multiply(bytes)
+
+* `bytes`: &lt;[HybridByte](#hybridbyte)|[HybridByte](#hybridbyte)[]&gt; Multiply byte(s) with the internal bytes, resulting in a new ByteUnitObject object with the value.
+* Returns: &lt;[ByteUnitObject](#byteunitobject)&gt;
+
+Multiply byte(s) with the internal bytes, resulting in a new [`ByteUnitObject`](#byteunitobject) object with the value
+
+#### ByteUnitObject().divide(bytes)
+
+* `bytes`: &lt;[HybridByte](#hybridbyte)|[HybridByte](#hybridbyte)[]&gt; Byte(s) to divide with.
+* Returns: &lt;[ByteUnitObject](#byteunitobject)&gt;
+
+Divide internal bytes by byte(s) specified, resulting in a new [`ByteUnitObject`](#byteunitobject) object with the value
+
+#### ByteUnitObject().checkInternalByteVal(bytes)
+
+Method to check integrity of internal bytes. Throw if there's an error somewhere.
+
+### <a id='hybridbyterelations'></a> HybridByteRelations: [`Object`][object]
 
 * `raw`:<a id='hybridraw'></a> &lt;[HybridByte](#hybridbyte)&gt; The unparsed data
 * `bits`: &lt;[ByteString](#bytestring)&gt; A relative bit parsing of the input [HybridByte](#hybridraw)
@@ -290,7 +342,7 @@ $ node examples/extract.js 'Hey, its 6GB, but my 8 TB flash drive is better'
 
 ## Features
 
-### Compatible with all versions of NodeJS (tested from v1.8.4)
+## Compatible with all versions of NodeJS (tested from v1.8.4)
 
 ``` bash
 $ nvm exec v1.8.4 node -pe 'require(".")(3748587)'
@@ -305,7 +357,7 @@ $ nvm exec v11.10.0 node -pe '
 "My 80.00 Gb drive transmits at 2.10 Gb/sec"
 ```
 
-### Decimal parsing
+## Decimal parsing
 
 ``` javascript
 xbytes(524334545.847775856); // 524.33 MB
@@ -315,19 +367,19 @@ xbytes(.24283884748955); // 0.24 B
 xbytes.parseSize('.295 MB'); // 295000
 ```
 
-### Parse human readable sizes in binary ([IEC][]) format to bytes
+## Parse human readable sizes in binary ([IEC][]) format to bytes
 
 ``` javascript
 xbytes.parseSize('1 MiB'); // 1048576
 ```
 
-### Parse byte values to extended human readable sizes
+## Parse byte values to extended human readable sizes
 
 ``` javascript
 xbytes(50000000, {short: false}); // '50.00 MegaBytes'
 ```
 
-### Match or extract [ByteString](#bytestring)s in a string
+## Match or extract [ByteString](#bytestring)s in a string
 
 ``` javascript
 let data = 'My 16GB flash drive has a 4GB Zip Archive and a 5MB JavaScript file';
@@ -341,7 +393,7 @@ data.replace(xbytes.globalByteFilter, xbytes.createSizeParser({ iec: false }))
   //> 'My 17179869184 flash drive has a 4294967296 Zip Archive and a 5242880 JavaScript file'
 ```
 
-### Decimal and Binary Unit Relativity
+## Decimal and Binary Unit Relativity
 
 ``` javascript
 import { parseSize, relative } from 'xbytes';
@@ -363,7 +415,7 @@ parseSize(relative('35 TiB', {fixed: 20}).iecBytes);
 
 ## Development
 
-### Building
+## Building
 
 Feel free to clone, use in adherance to the [license](#license) and perhaps send pull requests
 
@@ -376,7 +428,7 @@ npm run build
 npm test
 ```
 
-### Testing
+## Testing
 
 Tests are executed with [Jest][jest]. To use it, simple run `npm install`, it will install
 Jest and its dependencies in your project's `node_modules` directory followed by `npm run build` and finally `npm test`.
