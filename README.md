@@ -191,11 +191,14 @@ An regular expression extension of [`genericMatcher`](#genericmatcher) with the 
 
 ### <a id='bytestring'></a> ByteString: [`String`][string]
 
- The result of a parsed byte
+ A stringed byte representation. The result of a parsed byte value.
 
 * '5 MB'
 * '10 GiB'
 * '0.67 Tb'
+* '-50 KB'
+* '2e+15 KB'
+* '-9e-4 GB'
 
 ### <a id='hybridbyte'></a> HybridByte: [`Number`][number]|[`ByteString`](#bytestring)
 
