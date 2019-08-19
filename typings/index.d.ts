@@ -90,19 +90,19 @@ declare namespace xbytes {
     /**
      * Show the input size in relation to its `bit` format
      */
-    bits(size: HybridByte): ByteString;
+    bits(size: HybridByte, options?: MainOpts): ByteString;
     /**
      * Show the input size in relation to its `byte` format
      */
-    bytes(size: HybridByte): ByteString;
+    bytes(size: HybridByte, options?: MainOpts): ByteString;
     /**
      * Show the input size in relation to its `bit` format under `IEC Standards`
      */
-    iecBits(size: HybridByte): ByteString;
+    iecBits(size: HybridByte, options?: MainOpts): ByteString;
     /**
      * Show the input size in relation to its `bytes` format under `IEC Standards`
      */
-    iecBytes(size: HybridByte): ByteString;
+    iecBytes(size: HybridByte, options?: MainOpts): ByteString;
     /**
      * Parse a hybrid byte into any unit, following the relativity
      * @param size A hybrid byte format i.e Either a number or a ByteString

@@ -85,30 +85,34 @@ Check if the provided argument is parsable _i.e_ raw_bytes ([number]) or [ByteSt
 * `options`: &lt;[ByteOptions](#byteoptions)&gt;
 * Returns: &lt;[HybridByteRelations](#hybridbyterelations)&gt;
 
-### <a id='fn:relative:bits'></a> xbytes.relative.bits(size)
+### <a id='fn:relative:bits'></a> xbytes.relative.bits(size[, options])
 
 * `size`: &lt;[HybridByte](#hybridbyte)&gt;
+* `options`: &lt;[ByteOptions](#byteoptions)&gt;
 * Returns: &lt;[ByteString](#Bytestring)&gt;
 
 Show the input size in relation to its `bit` format
 
-### <a id='fn:relative:bytes'></a> xbytes.relative.bytes(size)
+### <a id='fn:relative:bytes'></a> xbytes.relative.bytes(size[, options])
 
 * `size`: &lt;[HybridByte](#hybridbyte)&gt;
+* `options`: &lt;[ByteOptions](#byteoptions)&gt;
 * Returns: &lt;[ByteString](#Bytestring)&gt;
 
 Show the input size in relation to its `byte` format
 
-### <a id='fn:relative:iecBits'></a> xbytes.relative.iecBits(size)
+### <a id='fn:relative:iecBits'></a> xbytes.relative.iecBits(size[, options])
 
 * `size`: &lt;[HybridByte](#hybridbyte)&gt;
+* `options`: &lt;[ByteOptions](#byteoptions)&gt;
 * Returns: &lt;[ByteString](#Bytestring)&gt;
 
 Show the input size in relation to its `bit` format under `IEC Standards`
 
-### <a id='fn:relative:iecBytes'></a> xbytes.relative.iecBytes(size)
+### <a id='fn:relative:iecBytes'></a> xbytes.relative.iecBytes(size[, options])
 
 * `size`: &lt;[HybridByte](#hybridbyte)&gt;
+* `options`: &lt;[ByteOptions](#byteoptions)&gt;
 * Returns: &lt;[ByteString](#Bytestring)&gt;
 
 Show the input size in relation to its `bytes` format under `IEC Standards`
