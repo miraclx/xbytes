@@ -256,7 +256,10 @@ Byte parser with predefined configuration. Result of [`createByteParser`](#fn:cr
 * `bytes`: &lt;[boolean][]&gt; Whether or not the size is specifically represented as a `byte`.
   * `true` in `92 EB`
   * `false` in `28 Mb`
-* `input`: &lt;[ByteString](#bytestring)&gt; The unparsed String as was provided.
+* `unit`: &lt;[UnitString](#unitstring)&gt; Re-parsed UnitString of `inputUnit`, fixing formatting.
+  * `'TB'` if `'TB'`
+  * `'Gib'` if `'gib'`
+* `inputUnit`: &lt;[UnitString](#unitstring)&gt; The unparsed String as was provided.
   * `'47TB'` in `'47TB'`
 * `prefix`: &lt;[string][]&gt; The prefix of the size string.
   * `'K'` in `'KB'`
@@ -265,8 +268,6 @@ Byte parser with predefined configuration. Result of [`createByteParser`](#fn:cr
 
 ### <a id='parsedbytes'></a> ParsedBytes <sub>`extends`</sub> [ParsedUnit](#parsedunit): [`Object`][object]
 
-* `unit`: &lt;[UnitString](#unitstring)&gt; The unit of sizing.
-  * `'GiB'` in `'54 GiB'`
 * `input`: &lt;[ByteString](#bytestring)&gt; The unparsed String as was provided.
   * `'47TB'` in `'47TB'`
 * `value`: &lt;[number][]&gt; The value for the size.
@@ -276,7 +277,8 @@ Byte parser with predefined configuration. Result of [`createByteParser`](#fn:cr
 
 * `size`: &lt;[HybridByte](#hybridbyte)&gt; The value to be wrapped.
 
-Wrap a HybridByte in a chainable, transformative object
+Although instances of this class inherits properties of [ParsedBytes](#parsedbytes), it excludes the `input` property.
+Wrap a HybridByte in a chainable, transformative object.
 
 ```javascript
 new ByteUnitObject('10 MB').add('20 MB').size

@@ -20,11 +20,11 @@ declare namespace xbytes {
   }
 
   interface ParsedUnit extends InternalParsedUnit {
-    input: AllUnitStacks;
+    unit: AllUnitStacks;
+    inputUnit: AllUnitStacks;
   }
 
   interface ParsedBytes extends InternalParsedUnit {
-    unit: AllUnitStacks;
     input: HybridByte;
     value: ByteValue;
   }
