@@ -330,6 +330,7 @@ Method to check integrity of internal bytes. Throw if there's an error somewhere
 * `size`: &lt;[number][]&gt; The numeric byte format of the input [HybridByte](#hybridraw)
 * `bytes`: &lt;[ByteString](#bytestring)&gt; A relative byte parsing of the input [HybridByte](#hybridraw)
 * `iecBits`: &lt;[ByteString](#bytestring)&gt; A relative bit parsing of the input [HybridByte](#hybridraw) under the IEC Specification
+* `parsed`: &lt;[ByteString](#bytestring)&gt; A relative bit parsing of the input [HybridByte](#hybridraw) under the IEC Specification
 * `iecBytes`: &lt;[ByteString](#bytestring)&gt; A relative byte parsing of the input [HybridByte](#hybridraw) under the IEC Specification
   
 ## More Examples

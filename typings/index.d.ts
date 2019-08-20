@@ -54,6 +54,7 @@ declare namespace xbytes {
     bits: string;
     size: ByteValue;
     bytes: string;
+    parsed: TotalParsedBytes;
     iecBits: string;
     iecBytes: string;
   }
