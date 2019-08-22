@@ -75,6 +75,13 @@ Parse human readable size to bytes
 
 Check if the provided string is a [ByteString](#bytestring)
 
+### <a id='fn:isunit'></a> xbytes.isUnit(str)
+
+* `str`: &lt;[UnitString](#unitstring)&gt;
+* Returns: &lt;[boolean][]&gt;
+
+Check if the provided string is an [UnitString](#unitstring)
+
 ### <a id='fn:isparsable'></a> xbytes.isParsable(input)
 
 * `input`: &lt;[ByteString](#bytestring)&gt;

@@ -142,6 +142,11 @@ declare namespace xbytes {
    */
   function isBytes(stringBytes: ByteString): boolean;
   /**
+   * Check if the provided string is a byte unit in string format
+   * @param stringUnit A stringed byte unit
+   */
+  function isUnit(stringUnit: AllUnitStacks): boolean;
+  /**
    * Check if the input value is a parsable byte-related object _i.e_ either a raw byte number or a ByteString
    * @param input
    */
