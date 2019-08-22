@@ -33,10 +33,13 @@ import xbytes from 'xbytes';
 ## Examples
 
 ``` javascript
-xbytes(4747);      // '4.75 KB'
+xbytes(4747); // '4.75 KB'
+xbytes(-3946); // '-3.95 KB'
 xbytes(34.724e+4); // '347.24 KB'
 xbytes(32000000000); // '32.00 GB'
+xbytes(21474836480, {iec: true}); // '20.00 GiB'
 xbytes.parseSize('10 GB'); // 10000000
+xbytes.parseSize('-50 GiB'); // -53687091200
 ```
 
 > *IEC Specification**
