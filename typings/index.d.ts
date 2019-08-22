@@ -237,6 +237,16 @@ declare namespace xbytes {
      * @param bytes Byte(s) to divide with
      */
     divide(bytes: HybridByte | HybridByte[]): ByteUnitObject
+
+    /**
+     * Parse the internal byte into any unit, following the relativity
+     * @param unit The unit for relativity
+     */
+    convertTo(unit: AllUnitStacks, opts?: MainOpts): ByteString
+    /**
+     * Parse the internal bytes property to a byte object.
+     */
+    objectify(opts?: MainOpts): ParsedBytes
   }
 
   /**

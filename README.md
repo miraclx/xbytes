@@ -350,6 +350,21 @@ Multiply byte(s) with the internal bytes, resulting in a new [`ByteUnitObject`](
 
 Divide internal bytes by byte(s) specified, resulting in a new [`ByteUnitObject`](#byteunitobject) object with the value
 
+#### ByteUnitObject().convertTo(unit)
+
+* `unit`: &lt;[UnitString](#unitstring)&gt;
+* Returns: &lt;[ByteString](#bytestring)&gt;
+
+Parse the internal byte into any unit, following the relativity.
+
+
+#### ByteUnitObject().objectify(opts)
+
+* `opts`: &lt;[ByteOptions](#byteoptions)&gt;
+
+Parse the internal bytes property to a byte object.
+
+
 #### ByteUnitObject().checkInternalByteVal(bytes)
 
 Method to check integrity of internal bytes. Throw if there's an error somewhere.
