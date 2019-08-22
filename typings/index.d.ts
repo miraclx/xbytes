@@ -188,23 +188,30 @@ declare namespace xbytes {
    * Create a ByteUnitObject around the specified HybridByte
      * @param size The value to be wrapped
      * @example
-     * |> createObject('10 MB').add('20 MB').size
-     *  << '30.00 MB'
-     * |> createObject('20 GB').divide('10 MB').size
-     *  << '2.00 KB'
+     * |> new ByteUnitObject('10 MiB')
+     *  << ByteUnitObject { bytes: 10485760 }
+     * |> new ByteUnitObject('10 MiB').add('20 MiB')
+     *  << ByteUnitObject { bytes: 31457280 }
+     * |> new ByteUnitObject('10 MiB').add('20 MiB').toIECBytes()
+     *  << '30.00 MiB'
      */
-  function createObject(size: HybridByte): ByteUnitObject;
-  class ByteUnitObject extends TotalParsedBytes {
+  function parse(size: HybridByte): ByteUnitObject;
+
+  class ByteUnitObject {
+    bytes:  ByteValue
+    
     /**
      * Wrap a HybridByte in a chainable, transformative object
      * @param size The value to be wrapped
      * @example
-     * |> new ByteUnitObject('10 MB').add('20 MB').size
-     *  << '30.00 MB'
-     * |> new ByteUnitObject('20 GB').divide('10 MB').size
-     *  << '2.00 KB'
+     * |> new ByteUnitObject('10 MiB')
+     *  << ByteUnitObject { bytes: 10485760 }
+     * |> new ByteUnitObject('10 MiB').add('20 MiB')
+     *  << ByteUnitObject { bytes: 31457280 }
+     * |> new ByteUnitObject('10 MiB').add('20 MiB').toIECBytes()
+     *  << '30.00 MiB'
      */
-    constructor(size: HybridByte): void
+    constructor(size: HybridByte)
     /**
      * Method to check integrity of internal bytes
      * Throw if there's a detected error

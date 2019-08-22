@@ -307,18 +307,19 @@ Byte parser with predefined configuration. Result of [`createByteParser`](#fn:cr
 * `bytes`: &lt;[number][]&gt; The value for the size.
   * `10485760` from `'10 MiB'`
 
-### <a id='byteunitobject'></a> class ByteUnitObject <sub>`extends`</sub> [`ParsedByteString`](#parsedbytestring)
+### <a id='byteunitobject'></a> class ByteUnitObject
 
-* `size`: &lt;[HybridByte](#hybridbyte)&gt; The value to be wrapped.
+* `bytes`: &lt;[number][]&gt; Internal byte value.
 
-Although instances of this class inherits properties of [ParsedByteString](#parsedbytestring), it excludes the `input` property.
 Wrap a HybridByte in a chainable, transformative object.
 
 ```javascript
-new ByteUnitObject('10 MB').add('20 MB').size
-// << '30.00 MB'
-new ByteUnitObject('20 GB').divide('10 MB').size
-// << '2.00 KB'
+new ByteUnitObject('10 MiB')
+// << ByteUnitObject { bytes: 10485760 }
+new ByteUnitObject('10 MiB').add('20 MiB')
+// << ByteUnitObject { bytes: 31457280 }
+new ByteUnitObject('10 MiB').add('20 MiB').toIECBytes()
+// << '30.00 MiB'
 ```
 
 #### ByteUnitObject().add(bytes)
