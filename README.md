@@ -58,7 +58,7 @@ xbytes.parseSize('10 GiB'); // 10485760
 * `options`: &lt;[ByteOptions](#byteoptions)&gt;
 * Returns: &lt;[ByteString](#bytestring)&gt;
 
-Parse `byte` to human readable size. If `byte` is not an Integer or an Integer-like string, return `null` appropriately.
+Parse `byte` to human readable size. If `byte` is not a number or an number-like string, return `null` appropriately.
 
 ### <a id='fn:parsesize'></a> xbytes.parseSize(str[, config])
 
