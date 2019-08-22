@@ -24,12 +24,12 @@ declare namespace xbytes {
     inputUnit: AllUnitStacks;
   }
 
-  interface ParsedBytes extends InternalParsedUnit {
+  interface ParsedByteString extends InternalParsedUnit {
     input: HybridByte;
     value: ByteValue;
   }
 
-  interface TotalParsedBytes extends ParsedBytes {
+  interface ParsedBytes extends ParsedByteString {
     size: ByteString;
     bytes: ByteValue;
     input: HybridByte;
@@ -54,7 +54,7 @@ declare namespace xbytes {
     bits: string;
     size: ByteValue;
     bytes: string;
-    parsed: TotalParsedBytes;
+    parsed: ParsedBytes;
     iecBits: string;
     iecBytes: string;
   }
@@ -172,12 +172,12 @@ declare namespace xbytes {
    * @param options.iec Whether or not to enforce compliance to IEC Standards
    * @param options.bits Whether or not to parse a lower case 'b' as bits
    */
-  function parseBytes(size: HybridByte, options?: ParseByteOpts): TotalParsedBytes
+  function parseBytes(size: HybridByte, options?: MainOpts): ParsedBytes
   /**
    * Expose a string byte into its component parts
    * @param stringBytes A parsed byte in string format
    */
-  function parseString(stringBytes: ByteString): ParsedBytes;
+  function parseString(stringBytes: ByteString): ParsedByteString;
 
   /**
    * Create a ByteUnitObject around the specified HybridByte

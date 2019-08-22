@@ -126,10 +126,20 @@ Show the input size in relation to its `bytes` format under `IEC Standards`
 
 ### <a id='fn:parsestring'></a> xbytes.parseString(str)
 
-* `str`: &lt;[string][]&gt;
-* Returns: &lt;[ParsedBytes](#parsedbytes)&gt;
+* `str`: &lt;[ByteString](#bytestring)&gt;
+* Returns: &lt;[ParsedByteString](#parsedbytestring)&gt;
 
 Parse a human readable byte into its components
+
+### <a id='fn:parsebytes'></a> xbytes.parseBytes(str, options)
+
+* `str`: &lt;[HybridByte](#hybridbyte)&gt;
+* `options`: &lt;[ByteOptions](#byteoptions)&gt;
+* Returns: &lt;[ParsedBytes](#parsedbytes)&gt;
+
+Parse a human readable byte into its components.
+Extended from [parseString()](#parsestring), but with a few extra properties.
+And flexibility to use parse either an integer byte value or a `ByteString` resulting in the same object.
 
 ### <a id='fn:extractbytes'></a> xbytes.extractBytes(str)
 
@@ -270,18 +280,28 @@ Byte parser with predefined configuration. Result of [`createByteParser`](#fn:cr
 * `prefixIndex`: &lt;[number][]&gt; The index of the size string.
   * `'3'` in `'GB'`
 
-### <a id='parsedbytes'></a> ParsedBytes <sub>`extends`</sub> [ParsedUnit](#parsedunit): [`Object`][object]
+### <a id='parsedbytestring'></a> ParsedByteString <sub>`extends`</sub> [ParsedUnit](#parsedunit): [`Object`][object]
 
 * `input`: &lt;[ByteString](#bytestring)&gt; The unparsed String as was provided.
   * `'47TB'` in `'47TB'`
 * `value`: &lt;[number][]&gt; The value for the size.
   * `83` in `'83MB'`
 
-### <a id='byteunitobject'></a> class ByteUnitObject <sub>`extends`</sub> [`ParsedBytes`](#parsedbytes)
+### <a id='parsedbytes'></a> ParsedBytes <sub>`extends`</sub> [ParsedByteString](#parsedbytestring): [`Object`][object]
+
+* `input`: &lt;[HybridByte](#hybridbyte)&gt; The unparsed String as was provided.
+  * `1024` in `1024`
+  * `'47TB'` in `'47TB'`
+* `size`: &lt;[ByteString](#bytestring)&gt; The value for the size.
+  * `83` in `'83MB'`
+* `bytes`: &lt;[number][]&gt; The value for the size.
+  * `10485760` from `'10 MiB'`
+
+### <a id='byteunitobject'></a> class ByteUnitObject <sub>`extends`</sub> [`ParsedByteString`](#parsedbytestring)
 
 * `size`: &lt;[HybridByte](#hybridbyte)&gt; The value to be wrapped.
 
-Although instances of this class inherits properties of [ParsedBytes](#parsedbytes), it excludes the `input` property.
+Although instances of this class inherits properties of [ParsedByteString](#parsedbytestring), it excludes the `input` property.
 Wrap a HybridByte in a chainable, transformative object.
 
 ```javascript
