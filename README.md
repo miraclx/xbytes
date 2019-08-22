@@ -190,18 +190,18 @@ An regular expression extension of [`genericMatcher`](#genericmatcher) with the 
 
  Supported Unit Strings
 
- | Prefix |  Decimal Bits  | Binary Bits ([IEC][]) |  Decimal Bytes  | Binary Bytes ([IEC][]) |
- | :----: | :------------: | :-------------------: | :-------------: | :--------------------: |
- |   -    |    b (Bits)    |       b (Bits)        |    b (Bits)     |        b (Bits)        |
- |   -    |   B (Bytes)    |       B (Bytes)       |    B (Bytes)    |       B (Bytes)        |
- |   K    | Kb (KiloBits)  |    Kib (KiloBits)     | KB (KiloBytes)  |    KiB (KibiBytes)     |
- |   M    | Mb (MegaBits)  |    Mib (MebiBits)     | MB (MegaBytes)  |    MiB (MebiBytes)     |
- |   G    | Gb (GigaBits)  |    Gib (GibiBits)     | GB (GigaBytes)  |    GiB (GibiBytes)     |
- |   T    | Tb (TeraBits)  |    Tib (TebiBits)     | TB (TeraBytes)  |    TiB (TebiBytes)     |
- |   P    | Pb (PetaBits)  |    Pib (PebiBits)     | PB (PetaBytes)  |    PiB (PebiBytes)     |
- |   E    |  Eb (ExaBits)  |    Eib (ExbiBits)     |  EB (ExaBytes)  |    EiB (ExbiBytes)     |
- |   Z    | Zb (ZettaBits) |    Zib (ZebiBits)     | ZB (ZettaBytes) |    ZiB (ZebiBytes)     |
- |   Y    | Yb (YottaBits) |    Yib (YobiBits)     | YB (YottaBytes) |    YiB (YobiBytes)     |
+ | Prefix |    Decimal Bits    | Binary Bits ([IEC][]) |    Decimal Bytes    | Binary Bytes ([IEC][]) |
+ | :----: | :----------------: | :-------------------: | :-----------------: | :--------------------: |
+ |   -    | **b (Bits)**       | **b (Bits)**          | **b (Bits)**        | **b (Bits)**           |
+ |   -    | **B (Bytes)**      | **B (Bytes)**         | **B (Bytes)**       | **B (Bytes)**          |
+ |   K    | **Kb (KiloBits)**  | **Kib (KiloBits)**    | **KB (KiloBytes)**  | **KiB (KibiBytes)**    |
+ |   M    | **Mb (MegaBits)**  | **Mib (MebiBits)**    | **MB (MegaBytes)**  | **MiB (MebiBytes)**    |
+ |   G    | **Gb (GigaBits)**  | **Gib (GibiBits)**    | **GB (GigaBytes)**  | **GiB (GibiBytes)**    |
+ |   T    | **Tb (TeraBits)**  | **Tib (TebiBits)**    | **TB (TeraBytes)**  | **TiB (TebiBytes)**    |
+ |   P    | **Pb (PetaBits)**  | **Pib (PebiBits)**    | **PB (PetaBytes)**  | **PiB (PebiBytes)**    |
+ |   E    | **Eb (ExaBits)**   | **Eib (ExbiBits)**    | **EB (ExaBytes)**   | **EiB (ExbiBytes)**    |
+ |   Z    | **Zb (ZettaBits)** | **Zib (ZebiBits)**    | **ZB (ZettaBytes)** | **ZiB (ZebiBytes)**    |
+ |   Y    | **Yb (YottaBits)** | **Yib (YobiBits)**    | **YB (YottaBytes)** | **YiB (YobiBytes)**    |
 
 ### <a id='bytestring'></a> ByteString: [`String`][string]
 
