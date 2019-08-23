@@ -357,6 +357,14 @@ Divide internal bytes by byte(s) specified, resulting in a new [`ByteUnitObject`
 
 Parse the internal byte into any unit, following the relativity.
 
+``` javascript
+new ByteUnitObject('10 MiB')
+// >> ByteUnitObject { bytes: 10485760 }
+new ByteUnitObject('10 MiB').convertTo('MB')
+// >> '10.49 MB'
+new ByteUnitObject('10 MiB').add('50 MB').convertTo('KB')
+    '60485.76 KB'
+```
 
 #### ByteUnitObject().objectify(opts)
 

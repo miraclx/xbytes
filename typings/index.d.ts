@@ -241,6 +241,13 @@ declare namespace xbytes {
     /**
      * Parse the internal byte into any unit, following the relativity
      * @param unit The unit for relativity
+     * @example
+     * |> new ByteUnitObject('10 MiB')
+     *  << ByteUnitObject { bytes: 10485760 }
+     * |> new ByteUnitObject('10 MiB').convertTo('MB')
+     *  << '10.49 MiB'
+     * |> new ByteUnitObject('10 MiB').add('50 MB').convertTo('KB')
+     *  << '60485.76 KB'
      */
     convertTo(unit: AllUnitStacks, opts?: MainOpts): ByteString
     /**
