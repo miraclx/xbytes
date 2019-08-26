@@ -290,6 +290,7 @@ Used to identify a variable thats either a [ByteString](#bytestring) or a [numbe
 * `fixed`: &lt;[number][]&gt; Number of digits to include after decimal point. **Default**: `2`.
 * `short`: &lt;[boolean][]&gt; Whether or not to shorten unit String [short: 'MB', long: 'MegaBytes']. **Default**: `true`.
 * `space`: &lt;[boolean][]&gt; Whether or not to include a white space inbetween value and unit. **Default**: `true`.
+* `sticky`: &lt;[boolean][]&gt; Whether or not to retain unit on max unit values. e.g `'1024.00 GiB'` instead of `'1.00 TiB'`. **Default**: `false`.
 * `prefixIndex`: &lt;[number][]&gt; The index of size relativity.
 
 ### <a id='parseoptions'></a> ParseOptions: [`Object`][object]
