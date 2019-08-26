@@ -82,6 +82,22 @@ xbytes.parseSize('5.97 PiB')
 // << 6721622443850465
 ```
 
+### <a id='fn:parse'></a> xbytes.parse(size)
+
+* `str`: &lt;[HybridByte](#hybridbyte)&gt;
+* Returns: &lt;[ByteUnitObject](#byteunitobject)&gt;
+
+Create a ByteUnitObject around the specified HybridByte
+
+```javascript
+xbytes.parse('10 MiB')
+// << ByteUnitObject { bytes: 10485760 }
+xbytes.parse('10 MiB').add('20 MiB')
+// << ByteUnitObject { bytes: 31457280 }
+xbytes.parse('10 MiB').add('20 MiB').toIECBytes()
+// << '30.00 MiB'
+```
+
 ### <a id='fn:isbytes'></a> xbytes.isBytes(str)
 
 * `str`: &lt;[string][]&gt;

@@ -188,11 +188,11 @@ declare namespace xbytes {
    * Create a ByteUnitObject around the specified HybridByte
      * @param size The value to be wrapped
      * @example
-     * |> new ByteUnitObject('10 MiB')
+     * |> parse('10 MiB')
      *  << ByteUnitObject { bytes: 10485760 }
-     * |> new ByteUnitObject('10 MiB').add('20 MiB')
+     * |> parse('10 MiB').add('20 MiB')
      *  << ByteUnitObject { bytes: 31457280 }
-     * |> new ByteUnitObject('10 MiB').add('20 MiB').toIECBytes()
+     * |> parse('10 MiB').add('20 MiB').toIECBytes()
      *  << '30.00 MiB'
      */
   function parse(size: HybridByte): ByteUnitObject;
