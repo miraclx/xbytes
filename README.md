@@ -60,6 +60,13 @@ xbytes.parseSize('10 GiB'); // 10485760
 
 Parse `byte` to human readable size. If `byte` is not a number or an number-like string, return `null` appropriately.
 
+```javascript
+xbytes(2472946)
+// << '2.47 MB'
+xbytes(49392123904, {iec: true})
+// << '46.00 GiB'
+```
+
 ### <a id='fn:parsesize'></a> xbytes.parseSize(str[, config])
 
 * `str`: &lt;[ByteString](#bytestring)&gt;
@@ -68,6 +75,13 @@ Parse `byte` to human readable size. If `byte` is not a number or an number-like
 
 Parse human readable size to bytes
 
+```javascript
+xbytes.parseSize('15.967 MB')
+// << 15967000
+xbytes.parseSize('5.97 PiB')
+// << 6721622443850465
+```
+
 ### <a id='fn:isbytes'></a> xbytes.isBytes(str)
 
 * `str`: &lt;[string][]&gt;
@@ -75,12 +89,34 @@ Parse human readable size to bytes
 
 Check if the provided string is a [ByteString](#bytestring)
 
+``` javascript
+xbytes.isBytes('10 MiB')
+// << true
+xbytes.isBytes('Hello')
+// << false
+xbytes.isBytes('10 iB')
+// << false
+xbytes.isBytes('10b')
+// << true
+```
+
 ### <a id='fn:isunit'></a> xbytes.isUnit(str)
 
 * `str`: &lt;[UnitString](#unitstring)&gt;
 * Returns: &lt;[boolean][]&gt;
 
 Check if the provided string is an [UnitString](#unitstring)
+
+``` javascript
+xbytes.isUnit('GB')
+// << true
+xbytes.isUnit('giB')
+// << true
+xbytes.isUnit('iB')
+// << false
+xbytes.isUnit('BB')
+// << false
+```
 
 ### <a id='fn:isparsable'></a> xbytes.isParsable(input)
 
