@@ -84,7 +84,7 @@ Check if the provided string is an [UnitString](#unitstring)
 
 ### <a id='fn:isparsable'></a> xbytes.isParsable(input)
 
-* `input`: &lt;[ByteString](#bytestring)&gt;
+* `input`: &lt;[HybridByte](#hybridbyte)&gt;
 * Returns: &lt;[boolean][]&gt;
 
 Check if the provided argument is parsable _i.e_ raw_bytes ([number]) or [ByteString](#bytestring).
