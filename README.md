@@ -438,7 +438,7 @@ Method to check integrity of internal bytes. Throw if there's an error somewhere
 * `iecBits`: &lt;[ByteString](#bytestring)&gt; A relative bit parsing of the input [HybridByte](#hybridraw) under the IEC Specification
 * `parsed`: &lt;[ByteString](#bytestring)&gt; A relative bit parsing of the input [HybridByte](#hybridraw) under the IEC Specification
 * `iecBytes`: &lt;[ByteString](#bytestring)&gt; A relative byte parsing of the input [HybridByte](#hybridraw) under the IEC Specification
-  
+
 ## More Examples
 
 Check out some examples in the `examples` folder
@@ -458,7 +458,7 @@ $ node examples/extract.js 'Hey, its 6GB, but my 8 TB flash drive is better'
 
 ## Features
 
-## Compatible with all versions of NodeJS (tested from v1.8.4)
+### Compatible with all versions of NodeJS (tested from v1.8.4)
 
 ``` bash
 $ nvm exec v1.8.4 node -pe 'require(".")(3748587)'
@@ -473,7 +473,7 @@ $ nvm exec v11.10.0 node -pe '
 "My 80.00 Gb drive transmits at 2.10 Gb/sec"
 ```
 
-## Decimal parsing
+### Decimal parsing
 
 ``` javascript
 xbytes(524334545.847775856); // 524.33 MB
@@ -483,19 +483,19 @@ xbytes(.24283884748955); // 0.24 B
 xbytes.parseSize('.295 MB'); // 295000
 ```
 
-## Parse human readable sizes in binary ([IEC][]) format to bytes
+### Parse human readable sizes in binary ([IEC][]) format to bytes
 
 ``` javascript
 xbytes.parseSize('1 MiB'); // 1048576
 ```
 
-## Parse byte values to extended human readable sizes
+### Parse byte values to extended human readable sizes
 
 ``` javascript
 xbytes(50000000, {short: false}); // '50.00 MegaBytes'
 ```
 
-## Match or extract [ByteString](#bytestring)s in a string
+### Match or extract [ByteString](#bytestring)s in a string
 
 ``` javascript
 let data = 'My 16GB flash drive has a 4GB Zip Archive and a 5MB JavaScript file';
@@ -509,7 +509,7 @@ data.replace(xbytes.globalByteFilter, xbytes.createSizeParser({ iec: false }))
   //> 'My 17179869184 flash drive has a 4294967296 Zip Archive and a 5242880 JavaScript file'
 ```
 
-## Decimal and Binary Unit Relativity
+### Decimal and Binary Unit Relativity
 
 ``` javascript
 import { parseSize, relative } from 'xbytes';
@@ -531,7 +531,7 @@ parseSize(relative('35 TiB', {fixed: 20}).iecBytes);
 
 ## Development
 
-## Building
+### Building
 
 Feel free to clone, use in adherance to the [license](#license) and perhaps send pull requests
 
@@ -544,7 +544,7 @@ npm run build
 npm test
 ```
 
-## Testing
+### Testing
 
 Tests are executed with [Jest][jest]. To use it, simple run `npm install`, it will install
 Jest and its dependencies in your project's `node_modules` directory followed by `npm run build` and finally `npm test`.
