@@ -41,6 +41,7 @@ declare namespace xbytes {
     fixed?: number;
     short?: boolean;
     space?: boolean;
+    sticky?: boolean;
     prefixIndex?: number;
   }
 
