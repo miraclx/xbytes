@@ -23,6 +23,8 @@ $ npm install xbytes
 const xbytes = require('xbytes');
 // Or Node ES6
 import xbytes from 'xbytes';
+// Or TypeScript
+import * as xbytes from 'xbytes';
 ```
 
 ``` html
