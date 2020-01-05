@@ -281,7 +281,9 @@ A stringed byte representation. The result of a parsed byte value.
 Used to identify a variable thats either a [ByteString](#bytestring) or a [number][]
 
 * '47 MiB'
+* '50kb'
 * 74753
+* '105'
 
 ### <a id='byteoptions'></a> ByteOptions: [`Object`][object]
 
