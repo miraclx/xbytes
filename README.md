@@ -13,7 +13,7 @@
 Via [NPM][npm]:
 
 ``` bash
-$ npm install xbytes
+npm install xbytes
 ```
 
 ## Usage
@@ -21,7 +21,7 @@ $ npm install xbytes
 ``` javascript
 // Node CommonJS
 const xbytes = require('xbytes');
-// Or Node ES6
+// Or Node ES6 Modules
 import xbytes from 'xbytes';
 // Or TypeScript
 import * as xbytes from 'xbytes';
@@ -428,7 +428,6 @@ new ByteUnitObject('10 MiB').add('50 MB').convertTo('KB')
 * `opts`: &lt;[ByteOptions](#byteoptions)&gt;
 
 Parse the internal bytes property to a byte object.
-
 
 #### ByteUnitObject().checkInternalByteVal(bytes)
 
