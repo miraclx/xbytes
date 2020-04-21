@@ -7,8 +7,8 @@
   "scripts": {
     "test": "jest",
     "build": "babel lib -d dist",
-    "preversion": "npm test",
-    "version": "npm run build",
+    "preversion": "npm run build",
+    "version": "npm test",
     "postversion": "git push gitlab master && git push github master"
   },
   "engines": {
