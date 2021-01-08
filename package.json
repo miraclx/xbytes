@@ -3,10 +3,14 @@
   "version": "1.6.2",
   "description": "Parse bytes to human readable sizes (4747) → ('4.75 KB') and vice versa.",
   "main": "dist/index.js",
+  "exports": {
+    "require": "./dist/index.js",
+    "import": "./dist/index.mjs"
+  },
   "types": "typings/index.d.ts",
   "scripts": {
     "test": "jest",
-    "build": "babel lib -d dist",
+    "build": "babel lib -d dist && (cat dist/index.js; printf '\nexport default xbytes;') > dist/index.mjs",
     "preversion": "npm run build",
     "version": "npm test",
     "postversion": "git push gitlab master && git push github master"
