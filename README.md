@@ -449,7 +449,12 @@ Check out some examples in the `examples` folder
 
 ``` javascript
 $ node examples/index.js 'Hey, its 6GB, but my 8 TB flash drive is better'
-[tabular data]
+┌─────────┬──────────┬───────────┬────────┬───────────┬────────────┬────────────┬─────────────┐
+│ (index) │  parsed  │   size    │  raw   │   bytes   │  iecBytes  │    bits    │   iecBits   │
+├─────────┼──────────┼───────────┼────────┼───────────┼────────────┼────────────┼─────────────┤
+│    0    │ [Object] │ '6.00 GB' │ '6GB'  │ '6.00 GB' │ '5.59 GiB' │ '48.00 Gb' │ '44.70 Gib' │
+│    1    │ [Object] │ '8.00 TB' │ '8 TB' │ '8.00 TB' │ '7.28 TiB' │ '64.00 Tb' │ '58.21 Tib' │
+└─────────┴──────────┴───────────┴────────┴───────────┴────────────┴────────────┴─────────────┘
 $ node examples/parse.js 'The 10GB file was downloaded in 50MB/s'
 The 10737418240 file was downloaded in 52428800/s
 $ node examples/relative.js mb '10GiB, 1mb 6   gb'
@@ -457,7 +462,12 @@ $ node examples/relative.js mb '10GiB, 1mb 6   gb'
 $ node examples/random.js 10 // Parse 10 random bytes
 [tabular data]
 $ node examples/extract.js 'Hey, its 6GB, but my 8 TB flash drive is better'
-[tabular data]
+┌─────────┬────────┬───────────────┐
+│ (index) │  size  │     bytes     │
+├─────────┼────────┼───────────────┤
+│    0    │ '6GB'  │  6000000000   │
+│    1    │ '8 TB' │ 8000000000000 │
+└─────────┴────────┴───────────────┘
 ```
 
 ## Features
