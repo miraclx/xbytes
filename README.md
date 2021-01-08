@@ -254,18 +254,18 @@ An regular expression extension of [`genericMatcher`](#genericmatcher) with the 
 
  Supported Unit Strings
 
- | Prefix |    Decimal Bits    | Binary Bits ([IEC][]) |    Decimal Bytes    | Binary Bytes ([IEC][]) |
- | :----: | :----------------: | :-------------------: | :-----------------: | :--------------------: |
- |   -    | **b (Bits)**       | **b (Bits)**          | **b (Bits)**        | **b (Bits)**           |
- |   -    | **B (Bytes)**      | **B (Bytes)**         | **B (Bytes)**       | **B (Bytes)**          |
- |   K    | **Kb (KiloBits)**  | **Kib (KiloBits)**    | **KB (KiloBytes)**  | **KiB (KibiBytes)**    |
- |   M    | **Mb (MegaBits)**  | **Mib (MebiBits)**    | **MB (MegaBytes)**  | **MiB (MebiBytes)**    |
- |   G    | **Gb (GigaBits)**  | **Gib (GibiBits)**    | **GB (GigaBytes)**  | **GiB (GibiBytes)**    |
- |   T    | **Tb (TeraBits)**  | **Tib (TebiBits)**    | **TB (TeraBytes)**  | **TiB (TebiBytes)**    |
- |   P    | **Pb (PetaBits)**  | **Pib (PebiBits)**    | **PB (PetaBytes)**  | **PiB (PebiBytes)**    |
- |   E    | **Eb (ExaBits)**   | **Eib (ExbiBits)**    | **EB (ExaBytes)**   | **EiB (ExbiBytes)**    |
- |   Z    | **Zb (ZettaBits)** | **Zib (ZebiBits)**    | **ZB (ZettaBytes)** | **ZiB (ZebiBytes)**    |
- |   Y    | **Yb (YottaBits)** | **Yib (YobiBits)**    | **YB (YottaBytes)** | **YiB (YobiBytes)**    |
+ | Index | Prefix |    Decimal Bits    | Binary Bits ([IEC][]) |    Decimal Bytes    | Binary Bytes ([IEC][]) |
+ | :---: | :----: | :----------------: | :-------------------: | :-----------------: | :--------------------: |
+ |   0   |   -    | **b (Bits)**       | **b (Bits)**          | **b (Bits)**        | **b (Bits)**           |
+ |   0   |   -    | **B (Bytes)**      | **B (Bytes)**         | **B (Bytes)**       | **B (Bytes)**          |
+ |   1   |   K    | **Kb (KiloBits)**  | **Kib (KiloBits)**    | **KB (KiloBytes)**  | **KiB (KibiBytes)**    |
+ |   2   |   M    | **Mb (MegaBits)**  | **Mib (MebiBits)**    | **MB (MegaBytes)**  | **MiB (MebiBytes)**    |
+ |   3   |   G    | **Gb (GigaBits)**  | **Gib (GibiBits)**    | **GB (GigaBytes)**  | **GiB (GibiBytes)**    |
+ |   4   |   T    | **Tb (TeraBits)**  | **Tib (TebiBits)**    | **TB (TeraBytes)**  | **TiB (TebiBytes)**    |
+ |   5   |   P    | **Pb (PetaBits)**  | **Pib (PebiBits)**    | **PB (PetaBytes)**  | **PiB (PebiBytes)**    |
+ |   6   |   E    | **Eb (ExaBits)**   | **Eib (ExbiBits)**    | **EB (ExaBytes)**   | **EiB (ExbiBytes)**    |
+ |   7   |   Z    | **Zb (ZettaBits)** | **Zib (ZebiBits)**    | **ZB (ZettaBytes)** | **ZiB (ZebiBytes)**    |
+ |   8   |   Y    | **Yb (YottaBits)** | **Yib (YobiBits)**    | **YB (YottaBytes)** | **YiB (YobiBytes)**    |
 
 ### <a id='bytestring'></a> ByteString: [`String`][string]
 
@@ -295,7 +295,7 @@ Used to identify a variable thats either a [ByteString](#bytestring) or a [numbe
 * `short`: &lt;[boolean][]&gt; Whether or not to shorten unit String [short: 'MB', long: 'MegaBytes']. **Default**: `true`.
 * `space`: &lt;[boolean][]&gt; Whether or not to include a white space inbetween value and unit. **Default**: `true`.
 * `sticky`: &lt;[boolean][]&gt; Whether or not to retain unit on max unit values. e.g `'1024.00 GiB'` instead of `'1.00 TiB'`. **Default**: `false`.
-* `prefixIndex`: &lt;[number][]&gt; The index of size relativity.
+* `prefixIndex`: &lt;[number][]&gt; The index of unit relativity [See [UnitString](#unitstring)].
 
 ### <a id='parseoptions'></a> ParseOptions: [`Object`][object]
 
@@ -344,8 +344,8 @@ Byte parser with predefined configuration. Result of [`createByteParser`](#fn:cr
   * `'47TB'` in `'47TB'`
 * `prefix`: &lt;[string][]&gt; The prefix of the size string.
   * `'K'` in `'KB'`
-* `prefixIndex`: &lt;[number][]&gt; The index of the size string.
-  * `'3'` in `'GB'`
+* `prefixIndex`: &lt;[number][]&gt; The index of the size unit [See [UnitString](#unitstring)].
+  * `3` in `'GB'`
 
 ### <a id='parsedbytestring'></a> ParsedByteString <sub>`extends`</sub> [ParsedUnit](#parsedunit): [`Object`][object]
 
