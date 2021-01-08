@@ -469,7 +469,7 @@ $ nvm exec v1.8.4 node -pe 'require(".")(3748587)'
 "3.75 MB"
 $ nvm exec v5.12.0 node -pe 'require(".").parseSize("476 TiB")'
 523367534821376
-$ nvm exec v11.10.0 node -pe '
+$ nvm exec v11.10.0 node -e '
   let xbytes = require("./dist");
   let str = "My 10GB drive transmits at 250MiB/sec"
   console.log(str.replace(xbytes.globalByteFilter, xbytes.relative.bits))
