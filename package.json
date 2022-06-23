@@ -12,8 +12,7 @@
     "test": "jest",
     "build": "babel lib -d dist && node build.js",
     "preversion": "npm run build",
-    "version": "npm test",
-    "postversion": "git push gitlab master && git push github master"
+    "version": "npm test"
   },
   "engines": {
     "node": ">=1"
