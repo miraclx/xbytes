@@ -1,6 +1,6 @@
 {
   "name": "xbytes",
-  "version": "1.8.0",
+  "version": "1.9.0",
   "description": "Parse bytes to human readable sizes (4747) → ('4.75 KB') and vice versa.",
   "main": "dist/index.js",
   "module": "dist/index.mjs",
