@@ -5,35 +5,16 @@ const PassThrough = require('stream').PassThrough;
 const DIST_DIR = join(__dirname, 'dist');
 const DIST_LIB = join(DIST_DIR, 'index.js');
 
-const exportedMembers = [
-  'ByteUnitObject',
-  'byteFilter',
-  'createByteParser',
-  'createRelativeSizer',
-  'createSizeParser',
-  'extractBytes',
-  'genericMatcher',
-  'globalByteFilter',
-  'isBytes',
-  'isParsable',
-  'isUnit',
-  'parse',
-  'parseBytes',
-  'parseSize',
-  'parseString',
-  'parseUnit',
-  'relative',
-  'unitMatcher',
-];
+let lib = require(DIST_LIB);
 
 function createEsmDist(cb) {
   fs.createReadStream(DIST_LIB)
     .pipe(
       new PassThrough({
         final: function(cb) {
-          this.push('\nexport {\n  ');
-          this.push(exportedMembers.join(',\n  '));
-          this.push(',\n};\nexport default xbytes;\n');
+          this.push('\nexport {\n');
+          for (let key in lib) this.push(`  ${key},\n`);
+          this.push('};\nexport default xbytes;\n');
           cb();
         },
       })
