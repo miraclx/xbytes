@@ -6,12 +6,12 @@
   "module": "dist/index.mjs",
   "exports": {
     "require": {
-      "default": "./dist/index.js",
-      "types": "./typings/index.d.ts"
+      "types": "./typings/index.d.ts",
+      "default": "./dist/index.js"
     },
     "import": {
-      "default": "./dist/index.mjs",
-      "types": "./typings/index.d.ts"
+      "types": "./typings/index.d.ts",
+      "default": "./dist/index.mjs"
     }
   },
   "types": "typings/index.d.ts",
